@@ -23,6 +23,7 @@ jobs:
          echo test
   job2:   # this is job name
     runs-on: ubuntu-latest   # give the name of OS runner where the job will be executed
+    needs: job1
     steps:
       - uses: actions/checkout@v4 #it will clone current repo in ubuntu machine
   job3:   # this is job name
