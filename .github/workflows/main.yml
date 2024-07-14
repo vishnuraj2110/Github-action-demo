@@ -21,3 +21,14 @@ jobs:
        run: |    # use | symbol to pass set of commands to run function
          echo hello to github
          echo test
+  job2:   # this is job name
+    runs-on: ubuntu-latest   # give the name of OS runner where the job will be executed
+    steps:
+      - uses: actions/checkout@v4 #it will clone current repo in ubuntu machine
+  job3:   # this is job name
+    runs-on: ubuntu-latest   # give the name of OS runner where the job will be executed
+    steps:
+      - name: Execute set of commands
+        run: |
+          hostname -s
+          ls   
