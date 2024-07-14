@@ -1,0 +1,12 @@
+---
+name: This is our first workflow
+on:
+  push: branches:["main"]
+  pull_request: branches:["main"]
+  workflow_dispatch: null
+job:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a single file
+        run: echo hello world
